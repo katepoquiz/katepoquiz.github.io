@@ -10,13 +10,50 @@ navLinks?.querySelectorAll('a').forEach(a =>
 );
 
 /* -----------------------------------------------------
+   COUNTING ANIMATION
+   ----------------------------------------------------- */
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || '';
+    const useComma = counter.hasAttribute('data-comma');
+    const duration = 1800;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(ease * target);
+      const display = useComma ? current.toLocaleString() : current;
+      counter.textContent = display + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      statsObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+
+const statsGrid = document.querySelector('.stats-grid');
+if (statsGrid) statsObserver.observe(statsGrid);
+
+/* -----------------------------------------------------
    SAMPLE GALLERIES
    To add a real image: replace { caption: '...' } with
    { src: 'images/your-image.jpg', caption: '...' }
    ----------------------------------------------------- */
 const galleries = {
   'executive-support': {
-    title: 'Executive Support — Samples',
+    title: 'Executive Support - Samples',
     items: [
       { caption: 'Calendar management dashboard' },
       { caption: 'Inbox triage system' },
@@ -27,7 +64,7 @@ const galleries = {
     ],
   },
   'business-development': {
-    title: 'Business Development — Samples',
+    title: 'Business Development - Samples',
     items: [
       { caption: 'LinkedIn outreach sequence' },
       { caption: 'Lead generation tracker' },
@@ -38,7 +75,7 @@ const galleries = {
     ],
   },
   'crm-automation': {
-    title: 'CRM & Automation — Samples',
+    title: 'CRM & Automation - Samples',
     items: [
       { caption: 'GoHighLevel pipeline build' },
       { caption: 'Zapier workflow map' },
@@ -49,10 +86,8 @@ const galleries = {
     ],
   },
   'project-coordination': {
-    title: 'Project Coordination — Samples',
+    title: 'Project Coordination - Samples',
     items: [
-      { caption: 'SOW template' },
-      { caption: 'NDA template' },
       { caption: 'Project tracker (Asana)' },
       { caption: 'Hours logging system' },
       { caption: 'Client onboarding checklist' },
@@ -60,22 +95,20 @@ const galleries = {
     ],
   },
   'social-content': {
-    title: 'Social Media & Content — Samples',
+    title: 'Social Media & Content - Samples',
     items: [
       { caption: 'Instagram carousel design' },
-      { caption: 'Reel — short-form video' },
+      { caption: 'Reel - short-form video' },
       { caption: 'Monthly content calendar' },
       { caption: 'SEO blog post sample' },
       { caption: 'Brand graphics set' },
-      { caption: 'Engagement metrics report' },
     ],
   },
   'documentation': {
-    title: 'Documentation & SOPs — Samples',
+    title: 'Documentation & SOPs - Samples',
     items: [
       { caption: 'Onboarding SOP' },
       { caption: 'Client case study' },
-      { caption: 'Training module sample' },
       { caption: 'Process documentation template' },
       { caption: 'Internal knowledge base' },
       { caption: 'Quick reference guide' },
