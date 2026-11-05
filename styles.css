@@ -807,39 +807,6 @@ body { overflow: hidden; background: var(--accent-dark); }
 @media (prefers-reduced-motion: reduce) {
   .mark::before { transition: none; transform: scaleX(1) rotate(-1.2deg); }
 }
-/* =====================================================
-   AURORA (Services + Experience), rose / blush palette
-   ===================================================== */
-.page > section.section-alt { background: linear-gradient(180deg, #FFFFFF 0%, #F7EEEA 100%); }
-.aurora { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.aurora span {
-  position: absolute; left: -30%; width: 160%; height: 30%;
-  border-radius: 50%; filter: blur(20px);
-  will-change: transform;
-}
-.aurora .au-1 {
-  top: 6%;
-  background: linear-gradient(90deg, transparent, rgba(240,220,211,0.9) 35%, rgba(233,211,202,0.9) 65%, transparent);
-  animation: au1 10s ease-in-out infinite alternate;
-}
-.aurora .au-2 {
-  top: 36%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.95) 40%, rgba(244,228,221,0.9) 70%, transparent);
-  animation: au2 12s ease-in-out infinite alternate;
-}
-.aurora .au-3 {
-  top: 62%; opacity: 0.6;
-  background: linear-gradient(90deg, transparent, rgba(166,124,109,0.55) 50%, transparent);
-  animation: au3 9s ease-in-out infinite alternate;
-}
-@keyframes au1 { from { transform: translateX(-8%) rotate(-9deg) scaleY(0.8); }  to { transform: translateX(8%) rotate(4deg) scaleY(1.4); } }
-@keyframes au2 { from { transform: translateX(6%) rotate(5deg) scaleY(1.2); }    to { transform: translateX(-8%) rotate(-6deg) scaleY(0.85); } }
-@keyframes au3 { from { transform: translateX(8%) rotate(-4deg) scaleY(0.9); }   to { transform: translateX(-6%) rotate(6deg) scaleY(1.55); } }
-
-/* text sitting directly on the aurora: darker tones keep AA at its darkest moment */
+/* text sitting directly on the mesh: darker tones keep AA at its darkest moment */
 .section-alt .section-sub { color: #4F4A45; }
 .section-alt > .container > .eyebrow { color: #6E4E44; }
-
-@media (prefers-reduced-motion: reduce) {
-  .aurora span { animation: none; }
-}

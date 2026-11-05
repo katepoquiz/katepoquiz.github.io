@@ -14,12 +14,12 @@
       return (seed - 1) / 2147483646;
     };
   }
-  /* ---------- Aurora ribbons behind the darker (alt) sections ---------- */
+  /* ---------- Mesh gradient behind the darker (alt) sections ---------- */
   document.querySelectorAll('.page > section.section-alt').forEach(sec => {
     const layer = document.createElement('div');
-    layer.className = 'aurora';
+    layer.className = 'mesh';
     layer.setAttribute('aria-hidden', 'true');
-    layer.innerHTML = '<span class="au-1"></span><span class="au-2"></span><span class="au-3"></span>';
+    layer.innerHTML = '<span class="mesh-a"></span><span class="mesh-b"></span><span class="mesh-c"></span><span class="mesh-d"></span>';
     sec.prepend(layer);
   });
 
