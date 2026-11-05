@@ -12,25 +12,35 @@
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" aria-label="Main">
   <div class="nav-inner">
-    <a href="#top" class="nav-brand">Kate Poquiz</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Menu">
+    <a href="#top" class="nav-brand"><span class="nav-mark" aria-hidden="true">KP</span>Kate Poquiz</a>
+    <div class="nav-links-wrap" id="navWrap">
+      <span class="nav-pill" aria-hidden="true"></span>
+      <span class="nav-line" aria-hidden="true"></span>
+      <ul class="nav-links">
+        <li><a href="#about" data-sec="about">About</a></li>
+        <li><a href="#services" data-sec="services">Services</a></li>
+        <li><a href="#portfolio" data-sec="portfolio">Portfolio</a></li>
+        <li><a href="#experience" data-sec="experience">Experience</a></li>
+        <li><a href="#tools" data-sec="tools">Tools</a></li>
+        <li><a href="#contact" data-sec="contact">Contact</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
+<!-- SECTION DOTS -->
+<nav class="dots" id="dots" aria-label="Jump to section"></nav>
+
+<div class="scroller" id="scroller">
+<main class="page" id="page">
+
 <!-- HERO -->
-<header id="top" class="hero">
+<header id="top" class="hero snap" data-label="Home">
   <div class="hero-bg"></div>
   <div class="container hero-content">
     <div class="hero-text">
@@ -44,16 +54,16 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="Kate 2x2.png" alt="Kate Poquiz" />
+      <img src="Kate 2x2.png" alt="Portrait of Kate Poquiz smiling, wearing a navy blazer" />
     </div>
   </div>
 </header>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section snap" data-label="About">
   <div class="container about-grid">
     <div>
-      <p class="eyebrow">About</p>
+      <p class="eyebrow"><span class="sec-num">01</span>About</p>
       <h2>A second set of hands for busy executives.</h2>
       <p class="lede">
         I'm an Executive Assistant and Virtual Operations professional with 5+ years of experience
@@ -79,9 +89,9 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section section-alt">
+<section id="services" class="section section-alt snap" data-label="Services">
   <div class="container">
-    <p class="eyebrow center">Services</p>
+    <p class="eyebrow center"><span class="sec-num">02</span>Services</p>
     <h2 class="center">What I Do</h2>
     <p class="section-sub center">Six core areas where I take work off your plate.</p>
 
@@ -176,23 +186,24 @@
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" class="section">
+<section id="portfolio" class="section snap" data-label="Portfolio">
   <div class="container">
-    <p class="eyebrow center">Portfolio</p>
+    <p class="eyebrow center"><span class="sec-num">03</span>Portfolio</p>
     <h2 class="center">Marketing &amp; Design Work</h2>
-    <p class="section-sub center">A selection of graphics, brochures, one-pagers, and reels I've created for clients and teams.</p>
+    <p class="section-sub center">Social graphics, carousels, and reels I've created for clients across three industries.</p>
 
-    <h3 class="portfolio-sub center">Graphics &amp; Print</h3>
-    <div class="coverflow" id="coverflow" role="group" aria-roledescription="carousel" aria-label="Graphics and print samples. Use the left and right arrow keys to browse.">
-      <div class="coverflow-stage" id="coverflowStage"></div>
-    </div>
-    <div class="coverflow-caption" aria-live="polite">
-      <p class="cf-title" id="cfTitle"></p>
-      <p class="cf-sub" id="cfSub"></p>
-    </div>
+    <h3 class="portfolio-sub center">Graphics</h3>
+    <p class="portfolio-hint">Click any graphic to view it full size.</p>
+    <div class="graphics" id="graphics"></div>
+  </div>
 
-    <p class="portfolio-hint">Use the arrows or swipe to browse. Click the center piece to view it full size.</p>
+  <div class="container">
+    <h3 class="portfolio-sub center">Carousels</h3>
+    <p class="portfolio-hint">Multi-slide posts, shown in slide order. Hover to pause, click a slide to enlarge it.</p>
+  </div>
+  <div class="photo-marquee" id="carousels"></div>
 
+  <div class="container">
     <h3 class="portfolio-sub center">Reels</h3>
     <p class="portfolio-hint">Hover or tab to a reel, then click it to play.</p>
     <div class="reels" id="reels"></div>
@@ -204,9 +215,9 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
+<section id="experience" class="section section-alt snap" data-label="Experience">
   <div class="container">
-    <p class="eyebrow center">Experience</p>
+    <p class="eyebrow center"><span class="sec-num">04</span>Experience</p>
     <h2 class="center">Where I've Worked</h2>
 
     <div class="exp-stack">
@@ -215,7 +226,7 @@
         <div class="exp-head">
           <div>
             <h3>Gilbert Sachs Group</h3>
-            <p class="exp-meta">Remote · Florida, US · Sep 2024 – Present</p>
+            <p class="exp-meta">Remote · Florida, US</p>
           </div>
           <span class="exp-tag">Current</span>
         </div>
@@ -239,12 +250,12 @@
         <div class="exp-head">
           <div>
             <h3>SimplifiVAs</h3>
-            <p class="exp-meta">Remote · Florida, US · Sep 2024 – Present</p>
+            <p class="exp-meta">Remote · Florida, US</p>
           </div>
           <span class="exp-tag">Current</span>
         </div>
         <div class="exp-sub">
-          <p class="exp-role">Administrative Assistant (Part-time) <span class="exp-date">· Sep 2025 – Present</span></p>
+          <p class="exp-role">Administrative Assistant (Part-time)</p>
           <ul class="exp-bullets">
             <li>Manage 50+ policy renewals per week, maintaining an 85%+ retention rate through proactive client communication and timely follow-ups.</li>
             <li>Audit 100+ policies per week across 50+ carriers in AppliedEPIC and EZLynx, flagging missing requirements to reduce cancellation risk.</li>
@@ -252,7 +263,7 @@
           </ul>
         </div>
         <div class="exp-sub">
-          <p class="exp-role">Social Media Manager (Part-time) <span class="exp-date">· Sep 2024 – Sep 2025</span></p>
+          <p class="exp-role">Social Media Manager (Part-time)</p>
           <ul class="exp-bullets">
             <li>Developed and executed content strategies across Instagram, Facebook, and LinkedIn, producing graphics, reels, and monthly content calendars.</li>
             <li>Responded to applicant inquiries received through social media channels.</li>
@@ -266,11 +277,11 @@
         <div class="exp-head">
           <div>
             <h3>Rane Media Group</h3>
-            <p class="exp-meta">Remote · New York, US · Jan 2024 – Sep 2024</p>
+            <p class="exp-meta">Remote · New York, US</p>
           </div>
         </div>
         <div class="exp-sub">
-          <p class="exp-role">Assistant to the Director of Operations (Full-time) <span class="exp-date">· Apr 2024 – Sep 2024</span></p>
+          <p class="exp-role">Assistant to the Director of Operations (Full-time)</p>
           <ul class="exp-bullets">
             <li>Managed executive inbox and calendar coordination to support daily operations.</li>
             <li>Handled client inquiries and product issues via Freshdesk with under 10-minute response times.</li>
@@ -281,7 +292,7 @@
           </ul>
         </div>
         <div class="exp-sub">
-          <p class="exp-role">Social Media Manager (Full-time) <span class="exp-date">· Jan 2024 – Apr 2024</span></p>
+          <p class="exp-role">Social Media Manager (Full-time)</p>
           <ul class="exp-bullets">
             <li>Managed content creation and posting across YouTube, Instagram, Facebook, and LinkedIn.</li>
             <li>Distributed monthly newsletters to 800+ clients to maintain strong customer relationships.</li>
@@ -296,7 +307,7 @@
         <div class="exp-head">
           <div>
             <h3>iQOR Philippines</h3>
-            <p class="exp-meta">On-site · Pampanga, PH · Mar 2022 – Jan 2024</p>
+            <p class="exp-meta">On-site · Pampanga, PH</p>
           </div>
         </div>
         <p class="exp-role">Collections Specialist (Full-time)</p>
@@ -311,7 +322,7 @@
         <div class="exp-head">
           <div>
             <h3>Sutherland Global Services</h3>
-            <p class="exp-meta">On-site · Nueva Ecija, PH · May 2021 – Jan 2022</p>
+            <p class="exp-meta">On-site · Nueva Ecija, PH</p>
           </div>
         </div>
         <p class="exp-role">Customer Service Representative (Full-time)</p>
@@ -326,7 +337,7 @@
         <div class="exp-head">
           <div>
             <h3>Polytechnic University of the Philippines</h3>
-            <p class="exp-meta">Manila, PH · 2022 – 2024</p>
+            <p class="exp-meta">Manila, PH</p>
           </div>
           <span class="exp-tag">Education</span>
         </div>
@@ -338,9 +349,9 @@
 </section>
 
 <!-- TOOLS -->
-<section id="tools" class="section section-alt">
+<section id="tools" class="section snap" data-label="Tools">
   <div class="container">
-    <p class="eyebrow center">Tools</p>
+    <p class="eyebrow center"><span class="sec-num">05</span>Tools</p>
     <h2 class="center">Tools I Work With</h2>
     <p class="section-sub center">A stack I use daily across executive support, sales ops, and content.</p>
   </div>
@@ -413,25 +424,42 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <div class="container center">
-    <p class="eyebrow">Contact</p>
-    <h2>Let's work together.</h2>
-    <p class="section-sub">Open to Executive Assistant and Social Media Manager roles.</p>
-    <div class="contact-cta">
-      <a class="btn btn-primary" href="mailto:cathleenpoquiz0710@gmail.com">Email Me</a>
-      <a class="btn btn-outline" href="https://linkedin.com/in/va-katepoquiz" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-</section>
+</main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <span>© <span id="year"></span> Kate Poquiz</span>
-    <span>Built with care.</span>
+<!-- CONTACT (curtain reveal) -->
+<footer id="contact" class="curtain snap-end" data-label="Contact">
+  <div class="curtain-inner container" id="curtainInner">
+    <p class="eyebrow"><span class="sec-num">06</span>Contact</p>
+    <h2>Let's work together.</h2>
+    <p class="curtain-sub">Open to Executive Assistant, Social Media Manager, and marketing roles.</p>
+    <div class="curtain-links">
+      <a class="curtain-link" href="mailto:cathleenpoquiz0710@gmail.com">
+        <span class="curtain-label">Email</span>
+        <span class="curtain-value">cathleenpoquiz0710@gmail.com</span>
+      </a>
+      <a class="curtain-link" href="https://linkedin.com/in/va-katepoquiz" target="_blank" rel="noopener">
+        <span class="curtain-label">LinkedIn</span>
+        <span class="curtain-value">linkedin.com/in/va-katepoquiz ↗</span>
+      </a>
+    </div>
+    <p class="curtain-foot">© <span id="year"></span> Kate Poquiz</p>
   </div>
 </footer>
+<div class="end-snap" aria-hidden="true"></div>
+</div><!-- /scroller -->
+
+<!-- GRAPHICS LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" inert>
+  <div class="lb-scrim" data-lb-close></div>
+  <figure class="lb-figure" id="lbFigure">
+    <img id="lbImg" alt="" />
+  </figure>
+  <div class="lb-caption" id="lbCaption">
+    <p class="lb-title" id="lbTitle"></p>
+    <a class="lb-open" id="lbOpen" href="#" target="_blank" rel="noopener">Open in Drive ↗</a>
+  </div>
+  <button class="lb-close" id="lbClose" data-lb-close aria-label="Close">×</button>
+</div>
 
 <!-- PORTFOLIO VIEWER -->
 <div class="viewer" id="viewer" hidden>
