@@ -567,9 +567,15 @@ body { overflow: hidden; background: var(--accent-dark); }
   transition: opacity 250ms var(--ease), transform 250ms var(--ease);
 }
 .lightbox.open .lb-caption { opacity: 1; transform: none; transition-delay: 250ms; }
-.lb-title { margin: 0 0 0.2rem; color: #fff; font-weight: 600; }
-.lb-open { color: #F0E8E3; font-size: 0.88rem; font-weight: 600; text-decoration: none; }
-.lb-open:hover { text-decoration: underline; }
+.lb-title { margin: 0 0 0.6rem; color: #fff; font-weight: 600; }
+.lb-open {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  background: #fff; color: var(--accent-dark);
+  font-size: 0.88rem; font-weight: 600; text-decoration: none;
+  transition: background 200ms var(--ease);
+}
+.lb-open:hover { background: var(--blush); }
 .lb-close {
   position: fixed; top: 18px; right: 18px;
   width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;

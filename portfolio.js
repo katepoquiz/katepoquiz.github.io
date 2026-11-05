@@ -13,31 +13,31 @@ const GRAPHICS = [
   {
     industry: 'Virtual Assistant Agency',
     items: [
-      { id: '1HLEkd7qYcdLjLY615vwEiimGgYPGKsZz', title: 'Eisenhower Matrix: Your Decision-Making Tool', alt: 'Blue graphic explaining the Eisenhower Matrix with do now, schedule, delegate, and delete steps' },
-      { id: '11VcS0r9iDWzUbZSVB9ONXwDOZqA-oRmB', title: "What's the Difference Between a VA, OBM, and PM?", alt: 'Graphic comparing a virtual assistant, online business manager, and project manager' },
-      { id: '1lcCEJRTpE0PB7n6wu_iosFUpRJF1xo-k', title: 'Streamline Your Inbox & Calendar', alt: 'Graphic with a calendar on a tablet promoting inbox and calendar support' },
-      { id: '1vMqNQSORJPPP0j-SP5r17yaHlut-rpaS', title: 'We Are Hiring', alt: 'Hiring announcement graphic for virtual assistants with a megaphone illustration' },
-      { id: '1mAQ61D-StcG23hW2Mv_CB9Hxj6h481DR', title: 'From Scattered to Systemized', alt: 'Case study graphic showing how a client\'s operations were systemized in 30 days' },
+      { src: 'work/graphics/va-agency-1.jpg', id: '1HLEkd7qYcdLjLY615vwEiimGgYPGKsZz', title: 'Eisenhower Matrix: Your Decision-Making Tool', alt: 'Blue graphic explaining the Eisenhower Matrix with do now, schedule, delegate, and delete steps' },
+      { src: 'work/graphics/va-agency-2.jpg', id: '11VcS0r9iDWzUbZSVB9ONXwDOZqA-oRmB', title: "What's the Difference Between a VA, OBM, and PM?", alt: 'Graphic comparing a virtual assistant, online business manager, and project manager' },
+      { src: 'work/graphics/va-agency-3.jpg', id: '1lcCEJRTpE0PB7n6wu_iosFUpRJF1xo-k', title: 'Streamline Your Inbox & Calendar', alt: 'Graphic with a calendar on a tablet promoting inbox and calendar support' },
+      { src: 'work/graphics/va-agency-4.jpg', id: '1vMqNQSORJPPP0j-SP5r17yaHlut-rpaS', title: 'We Are Hiring', alt: 'Hiring announcement graphic for virtual assistants with a megaphone illustration' },
+      { src: 'work/graphics/va-agency-5.jpg', id: '1mAQ61D-StcG23hW2Mv_CB9Hxj6h481DR', title: 'From Scattered to Systemized', alt: 'Case study graphic showing how a client\'s operations were systemized in 30 days' },
     ],
   },
   {
     industry: 'Architectural & Engineering Services',
     items: [
-      { id: '1Ow_4VsKVIiqF0SMjKKfMVoNca9jGF7NK', title: 'Commercial Services Offered', alt: 'Landscape architect services post featuring a beachfront resort' },
-      { id: '1ormWa9vUUEkou_JhJP68nuzKwsVNYo7o', title: 'Did You Know?', alt: 'Educational post about placing trees to lower energy bills, with palm trees beside a house' },
-      { id: '1fSJMhjXawTtu_MabR6SYhnIw9WDd4Ofl', title: 'Concept to Completion', alt: 'Before-and-after post showing a pool and fire bowl from concept rendering to finished build' },
-      { id: '1upgMDRZfvChIUEBa0w3pXqteAqCtc5ql', title: 'Ignite Your Outdoor Experience', alt: 'Evening photo of a lit mansion courtyard with a fire pit' },
-      { id: '1Gorj9UZWYxd0KK2hUx1Yu63N2mcLCI9G', title: 'Services', alt: 'Services post listing residential, commercial, and landscape architectural design with project photos' },
+      { src: 'work/graphics/architecture-1.jpg', id: '1Ow_4VsKVIiqF0SMjKKfMVoNca9jGF7NK', title: 'Commercial Services Offered', alt: 'Landscape architect services post featuring a beachfront resort' },
+      { src: 'work/graphics/architecture-2.jpg', id: '1ormWa9vUUEkou_JhJP68nuzKwsVNYo7o', title: 'Did You Know?', alt: 'Educational post about placing trees to lower energy bills, with palm trees beside a house' },
+      { src: 'work/graphics/architecture-3.jpg', id: '1fSJMhjXawTtu_MabR6SYhnIw9WDd4Ofl', title: 'Concept to Completion', alt: 'Before-and-after post showing a pool and fire bowl from concept rendering to finished build' },
+      { src: 'work/graphics/architecture-4.jpg', id: '1upgMDRZfvChIUEBa0w3pXqteAqCtc5ql', title: 'Ignite Your Outdoor Experience', alt: 'Evening photo of a lit mansion courtyard with a fire pit' },
+      { src: 'work/graphics/architecture-5.jpg', id: '1Gorj9UZWYxd0KK2hUx1Yu63N2mcLCI9G', title: 'Services', alt: 'Services post listing residential, commercial, and landscape architectural design with project photos' },
     ],
   },
   {
     industry: 'Insurance',
     items: [
-      { id: '1S8JMNOGrjWpOLc-WfP5CQwVRnDCEkBjn', title: 'Why Choose Protective Choice Insurance?', alt: 'Yellow and black insurance ad with an agent and a checklist of client results' },
-      { id: '1VmOqt6aT0OweX_JSAPqLjMCiYOBe_m-P', title: 'Myth vs. Fact: Home Insurance', alt: 'Myth versus fact graphic about common home insurance misconceptions' },
-      { id: '1wMAGvqde05Uxroz0VBz_3C6pX5YtzWYZ', title: '5 Factors That Impact Your Car Insurance Premium', alt: 'Numbered list graphic of five factors that affect car insurance premiums' },
-      { id: '13DHfcN0XuWoHUYLluGbKFmNi84v1KPXF', title: 'How Coverage Has Changed', alt: 'Throwback Thursday graphic comparing insurance coverage then and now' },
-      { id: '1chrsg_kNAfPIN_sFzJ3UVYB91mEyPlB5', title: "Monday Myths: I Don't Need Life Insurance", alt: 'Monday Myths graphic explaining why single people still need life insurance' },
+      { src: 'work/graphics/insurance-1.jpg', id: '1S8JMNOGrjWpOLc-WfP5CQwVRnDCEkBjn', title: 'Why Choose Protective Choice Insurance?', alt: 'Yellow and black insurance ad with an agent and a checklist of client results' },
+      { src: 'work/graphics/insurance-2.jpg', id: '1VmOqt6aT0OweX_JSAPqLjMCiYOBe_m-P', title: 'Myth vs. Fact: Home Insurance', alt: 'Myth versus fact graphic about common home insurance misconceptions' },
+      { src: 'work/graphics/insurance-3.jpg', id: '1wMAGvqde05Uxroz0VBz_3C6pX5YtzWYZ', title: '5 Factors That Impact Your Car Insurance Premium', alt: 'Numbered list graphic of five factors that affect car insurance premiums' },
+      { src: 'work/graphics/insurance-4.jpg', id: '13DHfcN0XuWoHUYLluGbKFmNi84v1KPXF', title: 'How Coverage Has Changed', alt: 'Throwback Thursday graphic comparing insurance coverage then and now' },
+      { src: 'work/graphics/insurance-5.jpg', id: '1chrsg_kNAfPIN_sFzJ3UVYB91mEyPlB5', title: "Monday Myths: I Don't Need Life Insurance", alt: 'Monday Myths graphic explaining why single people still need life insurance' },
     ],
   },
 ];
@@ -45,22 +45,22 @@ const GRAPHICS = [
 // Carousels, in file-name order. Row 1 and row 2 of the marquee.
 const CAROUSEL_ROWS = [
   [
-    { name: 'Blog', title: 'The Value of Time Management', ids: ['1Z7kPuRMhFtKJP9J3op4E1uI91CbbwjUY', '1COgc5nqpIpdsAgJaDQXh1rM5E5j3_qmH', '11ykM9RHFN9ZUOZ5wlSbUBhiz5dGU-0ei', '1V8dJ2lw-pk-v86z7_R_qEMyDsGjVgXDO'] },
-    { name: 'Why Choose PCI', title: 'Why Choose PCI', ids: ['1lHqjXZwnjEYGl5wq-GOdWKZkmiC-hQLf', '1eb5KWOTkreSCt9LYKGwa_B7HXrDNh6Ya', '19a4NQXBwpECf6t0rE4tNG_TIXR8_DIGV', '15Zcjvx2JFsUFPq7sHo40hH71xSvICdaf'] },
+    { name: 'Blog', file: 'blog', title: 'The Value of Time Management', ids: ['1Z7kPuRMhFtKJP9J3op4E1uI91CbbwjUY', '1COgc5nqpIpdsAgJaDQXh1rM5E5j3_qmH', '11ykM9RHFN9ZUOZ5wlSbUBhiz5dGU-0ei', '1V8dJ2lw-pk-v86z7_R_qEMyDsGjVgXDO'] },
+    { name: 'Why Choose PCI', file: 'pci', title: 'Why Choose PCI', ids: ['1lHqjXZwnjEYGl5wq-GOdWKZkmiC-hQLf', '1eb5KWOTkreSCt9LYKGwa_B7HXrDNh6Ya', '19a4NQXBwpECf6t0rE4tNG_TIXR8_DIGV', '15Zcjvx2JFsUFPq7sHo40hH71xSvICdaf'] },
   ],
   [
-    { name: 'Strategy', title: 'Automate These 3 Tasks', ids: ['1ibYwYEH0omxDQsrXE3J7fxdtnSHQ7Sg8', '15spwWPGMZyvRy9cDrRsB4Cjxtp_o4Sk0', '1kmjztvnH9k_45A2mILUuxRI2onMXXQcC', '1nd1kUWeJONvqIdn9oz1lv4vHCxfvcDvl'] },
-    { name: 'Teach', title: 'Top 5 Tools Every Business Owner Should Know', ids: ['1yHqcs281Bs_3i-pCveRz_oiOtYd8UKAJ', '1S2ftLMKrhaLuN0AFfFLIdfw4g6gIrjmr', '1wflNobEDaXoEYlEADvbtrCp0TrUb46NL', '1p8BbB8UN1SZCKb-X_J6Achwk8GlwfpgG', '1Ngml1EMkC-eda9HaG2gjGGjfjjJAf_TL', '1MloWMHt43uErjC-XFRnJHbs31BDcxkHz'] },
+    { name: 'Strategy', file: 'strategy', title: 'Automate These 3 Tasks', ids: ['1ibYwYEH0omxDQsrXE3J7fxdtnSHQ7Sg8', '15spwWPGMZyvRy9cDrRsB4Cjxtp_o4Sk0', '1kmjztvnH9k_45A2mILUuxRI2onMXXQcC', '1nd1kUWeJONvqIdn9oz1lv4vHCxfvcDvl'] },
+    { name: 'Teach', file: 'teach', title: 'Top 5 Tools Every Business Owner Should Know', ids: ['1yHqcs281Bs_3i-pCveRz_oiOtYd8UKAJ', '1S2ftLMKrhaLuN0AFfFLIdfw4g6gIrjmr', '1wflNobEDaXoEYlEADvbtrCp0TrUb46NL', '1p8BbB8UN1SZCKb-X_J6Achwk8GlwfpgG', '1Ngml1EMkC-eda9HaG2gjGGjfjjJAf_TL', '1MloWMHt43uErjC-XFRnJHbs31BDcxkHz'] },
   ],
 ];
 
 const REELS = [
-  { id: '1Zcg49SUrLnpcLDuQ-P4z895BjCdvdpgS', title: 'Project Reel 1', subtitle: 'Architecture & engineering · CapCut' },
-  { id: '1GPmG9xdv-QSP34XWvpCVh9Irz5iJizRi', title: 'Project Reel 2', subtitle: 'Architecture & engineering · CapCut' },
-  { id: '1y6cKheN1ODTcz2c_XXeDYgfUCZX6gvWD', title: 'Project Reel 3', subtitle: 'Architecture & engineering · CapCut' },
-  { id: '1G6vdiKF9QxxLA5sb2ItTTYWoo3wMWE6A', title: 'Project Reel 4', subtitle: 'Architecture & engineering · CapCut' },
-  { id: '1uFq6AV4QkMbVInki7oZY7MS8m-nDkSS4', title: 'Project Reel 5', subtitle: 'Architecture & engineering · CapCut' },
-  { id: '1jAxzaFsaBr_qGMLPqITgThCFqf_JsmTl', title: 'Project Reel 6', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1Zcg49SUrLnpcLDuQ-P4z895BjCdvdpgS', poster: 'work/reels/reel-1.jpg', title: 'Project Reel 1', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1GPmG9xdv-QSP34XWvpCVh9Irz5iJizRi', poster: 'work/reels/reel-2.jpg', title: 'Project Reel 2', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1y6cKheN1ODTcz2c_XXeDYgfUCZX6gvWD', poster: 'work/reels/reel-3.jpg', title: 'Project Reel 3', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1G6vdiKF9QxxLA5sb2ItTTYWoo3wMWE6A', poster: 'work/reels/reel-4.jpg', title: 'Project Reel 4', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1uFq6AV4QkMbVInki7oZY7MS8m-nDkSS4', poster: 'work/reels/reel-5.jpg', title: 'Project Reel 5', subtitle: 'Architecture & engineering · CapCut' },
+  { id: '1jAxzaFsaBr_qGMLPqITgThCFqf_JsmTl', poster: 'work/reels/reel-6.jpg', title: 'Project Reel 6', subtitle: 'Architecture & engineering · CapCut' },
 ];
 
 /* ===================================================== */
@@ -134,10 +134,12 @@ const lightbox = (() => {
     img.alt = item.alt || item.title;
     title.textContent = item.title;
     open.href = fileUrl(item.id);
-    // swap in a sharper version once it loads
-    const hi = new Image();
-    hi.onload = () => { if (thumb === thumbBtn) img.src = hi.src; };
-    hi.src = thumbUrl(item.id, 1400);
+    // site-hosted images are already full size; Drive ones get a sharper copy
+    if (!item.src) {
+      const hi = new Image();
+      hi.onload = () => { if (thumb === thumbBtn) img.src = hi.src; };
+      hi.src = thumbUrl(item.id, 1400);
+    }
 
     const rect = thumbBtn.getBoundingClientRect();
     fig.style.transition = 'none';
@@ -208,16 +210,26 @@ function makeThumb(item, { hidden = false, w = 600 } = {}) {
   btn.appendChild(img);
   btn.addEventListener('click', () => lightbox?.show(btn, item));
   const fail = () => { btn.classList.add('thumb-failed'); btn.dispatchEvent(new Event('thumbfail')); };
-  return { btn, img, load: () => queueDriveImage(img, item.id, w, fail) };
+  const load = () => {
+    if (!item.src) { queueDriveImage(img, item.id, w, fail); return; }
+    // images are stored on the site; fall back to Drive only if a file is missing
+    img.onerror = () => { img.onerror = null; queueDriveImage(img, item.id, w, fail); };
+    img.src = item.src;
+  };
+  return { btn, img, load };
 }
 
 // Start loading portfolio images only when the section gets close.
 function whenNear(el, cb) {
   if (!el) return;
-  const io = new IntersectionObserver(entries => {
-    if (entries.some(e => e.isIntersecting)) { io.disconnect(); cb(); }
-  }, { root: document.getElementById('scroller'), rootMargin: '1200px 0px' });
-  io.observe(el);
+  let done = false;
+  const run = () => { if (!done) { done = true; io?.disconnect(); cb(); } };
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)) run();
+  }, { root: document.getElementById('scroller'), rootMargin: '1200px 0px' }) : null;
+  io?.observe(el);
+  // safety net: load anyway shortly after the page settles
+  setTimeout(run, 2500);
 }
 
 /* ---------- Graphics grid ---------- */
@@ -254,6 +266,7 @@ function whenNear(el, cb) {
     track.className = 'pm-track';
     const slides = row.flatMap(set => set.ids.map((id, i) => ({
       id,
+      src: `work/carousels/${set.file}-${i + 1}.jpg`,
       title: `${set.title} (slide ${i + 1} of ${set.ids.length})`,
       alt: `${set.title} carousel, slide ${i + 1} of ${set.ids.length}`,
       first: i === 0,
@@ -329,7 +342,11 @@ document.addEventListener('keydown', e => {
     img.alt = `Opening frame of ${item.title}`;
     img.decoding = 'async';
     btn.appendChild(img);
-    loaders.push(() => queueDriveImage(img, item.id, 500, () => img.remove()));
+    loaders.push(() => {
+      if (!item.poster) { queueDriveImage(img, item.id, 500, () => img.remove()); return; }
+      img.onerror = () => { img.onerror = null; queueDriveImage(img, item.id, 500, () => img.remove()); };
+      img.src = item.poster;
+    });
 
     btn.insertAdjacentHTML('beforeend', `
       <span class="panel-scrim" aria-hidden="true"></span>
