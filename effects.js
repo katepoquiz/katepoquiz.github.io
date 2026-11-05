@@ -14,7 +14,16 @@
       return (seed - 1) / 2147483646;
     };
   }
-  document.querySelectorAll('.page > section.snap').forEach((sec, s) => {
+  /* ---------- Aurora ribbons behind the darker (alt) sections ---------- */
+  document.querySelectorAll('.page > section.section-alt').forEach(sec => {
+    const layer = document.createElement('div');
+    layer.className = 'aurora';
+    layer.setAttribute('aria-hidden', 'true');
+    layer.innerHTML = '<span class="au-1"></span><span class="au-2"></span><span class="au-3"></span>';
+    sec.prepend(layer);
+  });
+
+  document.querySelectorAll('.page > section.snap:not(.section-alt)').forEach((sec, s) => {
     const layer = document.createElement('div');
     layer.className = 'bokeh';
     layer.setAttribute('aria-hidden', 'true');
