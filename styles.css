@@ -651,3 +651,104 @@ body { overflow: hidden; background: var(--accent-dark); }
   .curtain { position: relative; }
   .curtain-inner { transform: none !important; opacity: 1 !important; }
 }
+/* =====================================================
+   LIVELY BACKGROUNDS (rose / blush palette)
+   ===================================================== */
+.page > section.snap, .hero { position: relative; isolation: isolate; }
+.page > section.snap > .container,
+.page > section.snap > .photo-marquee,
+.page > section.snap > .marquee,
+.hero > .container { position: relative; z-index: 1; }
+
+/* Mesh gradient behind the hero */
+.hero-bg { display: none; }
+.mesh {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+  background: #F6ECE7;
+}
+.mesh span {
+  position: absolute; width: 95%; height: 120%;
+  will-change: transform;
+}
+.mesh-a { top: -40%; left: -35%; background: radial-gradient(closest-side, rgba(166,124,109,0.34), transparent); animation: meshA 17s ease-in-out infinite alternate; }
+.mesh-b { top: -45%; right: -40%; background: radial-gradient(closest-side, rgba(227,201,190,0.85), transparent); animation: meshB 20s ease-in-out infinite alternate; }
+.mesh-c { bottom: -50%; left: -30%; background: radial-gradient(closest-side, rgba(255,255,255,0.95), transparent); animation: meshC 15s ease-in-out infinite alternate; }
+.mesh-d { bottom: -45%; right: -35%; background: radial-gradient(closest-side, rgba(240,226,219,0.95), transparent); animation: meshD 19s ease-in-out infinite alternate; }
+@keyframes meshA { from { transform: translate(0, 0) scale(1); } to { transform: translate(35%, 30%) scale(1.15); } }
+@keyframes meshB { from { transform: translate(0, 0) scale(1.1); } to { transform: translate(-38%, 32%) scale(0.9); } }
+@keyframes meshC { from { transform: translate(0, 0) scale(0.95); } to { transform: translate(32%, -36%) scale(1.2); } }
+@keyframes meshD { from { transform: translate(0, 0) scale(1.05); } to { transform: translate(-30%, -34%) scale(0.92); } }
+
+/* Hero text: darker tones so it stays readable on the mesh's darkest moment */
+.hero .eyebrow { color: #6E4E44; }
+.hero h1 .accent { color: var(--accent-dark); }
+.hero-subtitle { color: #4F4A45; }
+
+/* Bokeh discs behind sections */
+.page > section.snap:not(.section-alt) { background: linear-gradient(180deg, #FFFFFF 0%, #FBF6F3 100%); }
+.bokeh { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.bokeh span {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95), rgba(227,201,190,0.38) 60%, rgba(166,124,109,0.12));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.9);
+  opacity: 0;
+  animation: bokeh 7s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes bokeh {
+  0%   { opacity: 0;   transform: translateY(8px) scale(0.8); }
+  45%  { opacity: 0.9; transform: translateY(-2px) scale(1); }
+  100% { opacity: 0;   transform: translateY(-14px) scale(1.12); }
+}
+
+/* =====================================================
+   TITLES: bigger + typewriter
+   ===================================================== */
+.section h2, .curtain h2 { font-size: clamp(2.3rem, 4.4vw, 3.4rem); }
+.curtain h2 { font-size: clamp(2.5rem, 5.4vw, 4rem); }
+.about-title { margin-bottom: 1.4rem; }
+.portfolio-sub { font-size: 1.35rem; color: var(--text); }
+.tw { white-space: nowrap; min-height: 1.2em; }
+.tw-caret {
+  display: inline-block; width: 3px; height: 0.9em; margin-left: 0.12em;
+  border-radius: 3px; background: var(--accent);
+  vertical-align: -0.1em;
+  animation: twBlink 1s steps(1) infinite;
+}
+.curtain .tw-caret { background: #fff; }
+.tw.typing .tw-caret { animation: none; opacity: 1; }
+@keyframes twBlink { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+/* =====================================================
+   LINE-BY-LINE REVEAL (About paragraphs, Experience bullets)
+   ===================================================== */
+.about-more { color: var(--muted); }
+.rl-line { display: block; }
+.rl-ready .rl-line { opacity: 0; transform: translateY(16px); }
+.rl-ready.rl-in .rl-line {
+  animation: rlIn 700ms cubic-bezier(.32,.72,0,1) both;
+  animation-delay: calc(var(--i, 0) * 170ms);
+}
+.rl-ready.rl-done .rl-line { animation: none; opacity: 1; transform: none; }
+@keyframes rlIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 640px) {
+  /* long titles may wrap on phones instead of running off screen */
+  .tw { white-space: normal; min-height: 2.4em; }
+  .portfolio-sub.tw { min-height: 1.3em; white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesh span, .bokeh span, .tw-caret { animation: none !important; }
+  .bokeh span { opacity: 0.6; transform: none; }
+  .rl-ready .rl-line { opacity: 1; transform: none; animation: none; }
+}
+/* flex centering shrinks auto-margin containers; keep them full width */
+.snap > .container, .hero > .container { width: 100%; }
+
+/* Experience bullets: draw the dot on the first line so it reveals with the text */
+.exp-bullets.rl-ready { list-style: none; }
+.exp-bullets.rl-ready .rl-line { position: relative; }
+.exp-bullets.rl-ready li > .rl-line:first-child::before {
+  content: ''; position: absolute; left: -1rem; top: 0.62em;
+  width: 5px; height: 5px; border-radius: 50%; background: currentColor;
+}

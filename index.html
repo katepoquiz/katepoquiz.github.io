@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261105-3" />
+<link rel="stylesheet" href="styles.css?v=20261105-4" />
 </head>
 <body>
 
@@ -41,7 +41,7 @@
 
 <!-- HERO -->
 <header id="top" class="hero snap" data-label="Home">
-  <div class="hero-bg"></div>
+  <div class="mesh" aria-hidden="true"><span class="mesh-a"></span><span class="mesh-b"></span><span class="mesh-c"></span><span class="mesh-d"></span></div>
   <div class="container hero-content">
     <div class="hero-text">
       <p class="eyebrow">Portfolio</p>
@@ -61,17 +61,19 @@
 
 <!-- ABOUT -->
 <section id="about" class="section snap" data-label="About">
+  <div class="container">
+    <p class="eyebrow"><span class="sec-num">01</span>About</p>
+    <h2 class="about-title tw" data-phrases='["Your second set of hands.","Organized and proactive.","Built for busy executives."]' aria-label="Your second set of hands."><span class="tw-text" aria-hidden="true">Your second set of hands.</span><span class="tw-caret" aria-hidden="true"></span></h2>
+  </div>
   <div class="container about-grid">
     <div>
-      <p class="eyebrow"><span class="sec-num">01</span>About</p>
-      <h2>A second set of hands for busy executives.</h2>
-      <p class="lede">
+      <p class="lede reveal-lines">
         I'm an Executive Assistant and Virtual Operations professional with 5+ years of experience
         across B2B consulting, SaaS, insurance administration, and B2C customer service. From inbox
         and calendar management to lead generation, CRM automation, and SOP building, I take the
         operational weight off your plate so you can focus on the work only you can do.
       </p>
-      <p>
+      <p class="about-more reveal-lines">
         I build systems, from automated onboarding workflows to lead generation databases, that
         reduce manual work and keep operations running efficiently. Because I've worked across
         executive support, business development, project coordination, and content, I can plug into
@@ -92,7 +94,7 @@
 <section id="services" class="section section-alt snap" data-label="Services">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">02</span>Services</p>
-    <h2 class="center">What I Do</h2>
+    <h2 class="center tw" data-phrases='["What I Do","How I Help","Where I Add Value"]' aria-label="What I Do"><span class="tw-text" aria-hidden="true">What I Do</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">Six core areas where I take work off your plate.</p>
 
     <div class="card-grid">
@@ -189,22 +191,22 @@
 <section id="portfolio" class="section snap" data-label="Portfolio">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">03</span>Portfolio</p>
-    <h2 class="center">Marketing &amp; Design Work</h2>
+    <h2 class="center tw" data-phrases='["Marketing & Design Work","Content That Connects","Made to Be Shared"]' aria-label="Marketing &amp; Design Work"><span class="tw-text" aria-hidden="true">Marketing &amp; Design Work</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">Social graphics, carousels, and reels I've created for clients across three industries.</p>
 
-    <h3 class="portfolio-sub center">Graphics</h3>
+    <h3 class="portfolio-sub center tw" data-phrases='["Graphics","Social media posts","Designed in Canva"]' aria-label="Graphics"><span class="tw-text" aria-hidden="true">Graphics</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Click any graphic to view it full size.</p>
     <div class="graphics" id="graphics"></div>
   </div>
 
   <div class="container">
-    <h3 class="portfolio-sub center">Carousels</h3>
+    <h3 class="portfolio-sub center tw" data-phrases='["Carousels","Multi-slide stories","Swipe-worthy posts"]' aria-label="Carousels"><span class="tw-text" aria-hidden="true">Carousels</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Multi-slide posts, shown in slide order. Hover to pause, click a slide to enlarge it.</p>
   </div>
   <div class="photo-marquee" id="carousels"></div>
 
   <div class="container">
-    <h3 class="portfolio-sub center">Reels</h3>
+    <h3 class="portfolio-sub center tw" data-phrases='["Reels","Short-form video","Edited in CapCut"]' aria-label="Reels"><span class="tw-text" aria-hidden="true">Reels</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Hover or tab to a reel, then click it to play.</p>
     <div class="reels" id="reels"></div>
 
@@ -218,7 +220,7 @@
 <section id="experience" class="section section-alt snap" data-label="Experience">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">04</span>Experience</p>
-    <h2 class="center">Where I've Worked</h2>
+    <h2 class="center tw" data-phrases='["Where I've Worked","What I've Delivered","Who I've Supported"]' aria-label="Where I&#39;ve Worked"><span class="tw-text" aria-hidden="true">Where I&#39;ve Worked</span><span class="tw-caret" aria-hidden="true"></span></h2>
 
     <div class="exp-stack">
 
@@ -228,10 +230,9 @@
             <h3>Gilbert Sachs Group</h3>
             <p class="exp-meta">Remote · Florida, US</p>
           </div>
-          <span class="exp-tag">Current</span>
         </div>
         <p class="exp-role">Executive Assistant (Full-time)</p>
-        <ul class="exp-bullets">
+        <ul class="exp-bullets reveal-lines">
           <li>Manage the executive's calendar and inbox, prioritizing communications by urgency and aligning scheduling with business goals.</li>
           <li>Coordinate business travel (flights, accommodations, itineraries) and track expenses for reimbursement.</li>
           <li>Prepare meeting briefs and agendas, and produce post-meeting summaries to keep stakeholders aligned and action items on track.</li>
@@ -252,11 +253,10 @@
             <h3>SimplifiVAs</h3>
             <p class="exp-meta">Remote · Florida, US</p>
           </div>
-          <span class="exp-tag">Current</span>
         </div>
         <div class="exp-sub">
           <p class="exp-role">Administrative Assistant (Part-time)</p>
-          <ul class="exp-bullets">
+          <ul class="exp-bullets reveal-lines">
             <li>Manage 50+ policy renewals per week, maintaining an 85%+ retention rate through proactive client communication and timely follow-ups.</li>
             <li>Audit 100+ policies per week across 50+ carriers in AppliedEPIC and EZLynx, flagging missing requirements to reduce cancellation risk.</li>
             <li>Manage the Renewals team inbox and handle client and agent communications.</li>
@@ -264,7 +264,7 @@
         </div>
         <div class="exp-sub">
           <p class="exp-role">Social Media Manager (Part-time)</p>
-          <ul class="exp-bullets">
+          <ul class="exp-bullets reveal-lines">
             <li>Developed and executed content strategies across Instagram, Facebook, and LinkedIn, producing graphics, reels, and monthly content calendars.</li>
             <li>Responded to applicant inquiries received through social media channels.</li>
             <li>Produced training documentation and video tutorials on insurance quoting and servicing procedures.</li>
@@ -282,7 +282,7 @@
         </div>
         <div class="exp-sub">
           <p class="exp-role">Assistant to the Director of Operations (Full-time)</p>
-          <ul class="exp-bullets">
+          <ul class="exp-bullets reveal-lines">
             <li>Managed executive inbox and calendar coordination to support daily operations.</li>
             <li>Handled client inquiries and product issues via Freshdesk with under 10-minute response times.</li>
             <li>Facilitated weekly and monthly strategy calls via Zoom, managing GoHighLevel scheduling and WordPress meeting links.</li>
@@ -293,7 +293,7 @@
         </div>
         <div class="exp-sub">
           <p class="exp-role">Social Media Manager (Full-time)</p>
-          <ul class="exp-bullets">
+          <ul class="exp-bullets reveal-lines">
             <li>Managed content creation and posting across YouTube, Instagram, Facebook, and LinkedIn.</li>
             <li>Distributed monthly newsletters to 800+ clients to maintain strong customer relationships.</li>
             <li>Produced blog posts and SEO-optimized content to improve organic search visibility.</li>
@@ -311,7 +311,7 @@
           </div>
         </div>
         <p class="exp-role">Collections Specialist (Full-time)</p>
-        <ul class="exp-bullets">
+        <ul class="exp-bullets reveal-lines">
           <li>Handled inbound and outbound calls for Capital One Auto Finance customers, assisting with monthly payments and account inquiries.</li>
           <li>Advised customers on payment options and flexible arrangements to keep auto loan accounts current.</li>
           <li>Maintained professional, empathetic conversations around sensitive financial matters.</li>
@@ -326,7 +326,7 @@
           </div>
         </div>
         <p class="exp-role">Customer Service Representative (Full-time)</p>
-        <ul class="exp-bullets">
+        <ul class="exp-bullets reveal-lines">
           <li>Provided inbound call and live chat support for Amazon customers, resolving returns, refunds, and delivery disputes.</li>
           <li>Troubleshot product and account issues, guiding customers to resolution.</li>
           <li>Managed multiple support channels at once while maintaining high satisfaction rates.</li>
@@ -352,7 +352,7 @@
 <section id="tools" class="section snap" data-label="Tools">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">05</span>Tools</p>
-    <h2 class="center">Tools I Work With</h2>
+    <h2 class="center tw" data-phrases='["Tools I Work With","My Daily Stack","Platforms I Know"]' aria-label="Tools I Work With"><span class="tw-text" aria-hidden="true">Tools I Work With</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">A stack I use daily across executive support, sales ops, and content.</p>
   </div>
 
@@ -430,7 +430,7 @@
 <footer id="contact" class="curtain snap-end" data-label="Contact">
   <div class="curtain-inner container" id="curtainInner">
     <p class="eyebrow"><span class="sec-num">06</span>Contact</p>
-    <h2>Let's work together.</h2>
+    <h2 class=" tw" data-phrases='["Let's work together.","Let's talk.","Say hello."]' aria-label="Let&#39;s work together."><span class="tw-text" aria-hidden="true">Let&#39;s work together.</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="curtain-sub">Open to Executive Assistant, Social Media Manager, and marketing roles.</p>
     <div class="curtain-links">
       <a class="curtain-link" href="mailto:cathleenpoquiz0710@gmail.com">
@@ -474,7 +474,8 @@
   </div>
 </div>
 
-<script src="script.js?v=20261105-3"></script>
-<script src="portfolio.js?v=20261105-3"></script>
+<script src="script.js?v=20261105-4"></script>
+<script src="portfolio.js?v=20261105-4"></script>
+<script src="effects.js?v=20261105-4"></script>
 </body>
 </html>
