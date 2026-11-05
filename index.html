@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261105-4" />
+<link rel="stylesheet" href="styles.css?v=20261105-5" />
 </head>
 <body>
 
@@ -45,12 +45,12 @@
   <div class="container hero-content">
     <div class="hero-text">
       <p class="eyebrow">Portfolio</p>
-      <h1>Hi, I'm <span class="accent">Kate</span></h1>
-      <p class="hero-subtitle">Executive Assistant &nbsp;|&nbsp; Operations &nbsp;|&nbsp; Business Development</p>
-      <p class="hero-tagline">I help executives stay organized, grow their pipeline, and keep operations running - without them managing the details.</p>
+      <h1 class="tw hero-title" data-phrases="[&quot;Hi, I'm |Kate&quot;,&quot;Your next |EA&quot;,&quot;Let's |connect&quot;]" aria-label="Hi, I'm Kate"><span class="tw-text" aria-hidden="true">Hi, I'm <span class="accent">Kate</span></span><span class="tw-caret" aria-hidden="true"></span></h1>
+      <p class="hero-subtitle"><span class="mark">Executive Assistant</span> &nbsp;|&nbsp; Operations &nbsp;|&nbsp; Business Development</p>
+      <p class="hero-tagline">I help executives <span class="mark">stay organized</span>, grow their pipeline, and keep operations running - without them managing the details.</p>
       <div class="hero-cta">
-        <a href="#portfolio" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        <a href="#portfolio" class="btn btn-primary ripple"><span class="btn-label">View My Work</span></a>
+        <a href="#contact" class="btn btn-outline ripple"><span class="btn-label">Let's Connect</span></a>
       </div>
     </div>
     <div class="hero-photo">
@@ -63,7 +63,7 @@
 <section id="about" class="section snap" data-label="About">
   <div class="container">
     <p class="eyebrow"><span class="sec-num">01</span>About</p>
-    <h2 class="about-title tw" data-phrases='["Your second set of hands.","Organized and proactive.","Built for busy executives."]' aria-label="Your second set of hands."><span class="tw-text" aria-hidden="true">Your second set of hands.</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class="about-title tw" data-phrases="[&quot;Your second set of hands.&quot;,&quot;Organized and proactive.&quot;,&quot;Built for busy executives.&quot;]" aria-label="Your second set of hands."><span class="tw-text" aria-hidden="true">Your second set of hands.</span><span class="tw-caret" aria-hidden="true"></span></h2>
   </div>
   <div class="container about-grid">
     <div>
@@ -94,7 +94,7 @@
 <section id="services" class="section section-alt snap" data-label="Services">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">02</span>Services</p>
-    <h2 class="center tw" data-phrases='["What I Do","How I Help","Where I Add Value"]' aria-label="What I Do"><span class="tw-text" aria-hidden="true">What I Do</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class="center tw" data-phrases="[&quot;What I Do&quot;,&quot;How I Help&quot;,&quot;Where I Add Value&quot;]" aria-label="What I Do"><span class="tw-text" aria-hidden="true">What I Do</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">Six core areas where I take work off your plate.</p>
 
     <div class="card-grid">
@@ -191,22 +191,22 @@
 <section id="portfolio" class="section snap" data-label="Portfolio">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">03</span>Portfolio</p>
-    <h2 class="center tw" data-phrases='["Marketing & Design Work","Content That Connects","Made to Be Shared"]' aria-label="Marketing &amp; Design Work"><span class="tw-text" aria-hidden="true">Marketing &amp; Design Work</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class="center tw" data-phrases="[&quot;Marketing & Design Work&quot;,&quot;Content That Connects&quot;,&quot;Made to Be Shared&quot;]" aria-label="Marketing &amp; Design Work"><span class="tw-text" aria-hidden="true">Marketing &amp; Design Work</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">Social graphics, carousels, and reels I've created for clients across three industries.</p>
 
-    <h3 class="portfolio-sub center tw" data-phrases='["Graphics","Social media posts","Designed in Canva"]' aria-label="Graphics"><span class="tw-text" aria-hidden="true">Graphics</span><span class="tw-caret" aria-hidden="true"></span></h3>
+    <h3 class="portfolio-sub center tw" data-phrases="[&quot;Graphics&quot;,&quot;Social media posts&quot;,&quot;Designed in Canva&quot;]" aria-label="Graphics"><span class="tw-text" aria-hidden="true">Graphics</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Click any graphic to view it full size.</p>
     <div class="graphics" id="graphics"></div>
   </div>
 
   <div class="container">
-    <h3 class="portfolio-sub center tw" data-phrases='["Carousels","Multi-slide stories","Swipe-worthy posts"]' aria-label="Carousels"><span class="tw-text" aria-hidden="true">Carousels</span><span class="tw-caret" aria-hidden="true"></span></h3>
+    <h3 class="portfolio-sub center tw" data-phrases="[&quot;Carousels&quot;,&quot;Multi-slide stories&quot;,&quot;Swipe-worthy posts&quot;]" aria-label="Carousels"><span class="tw-text" aria-hidden="true">Carousels</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Multi-slide posts, shown in slide order. Hover to pause, click a slide to enlarge it.</p>
   </div>
   <div class="photo-marquee" id="carousels"></div>
 
   <div class="container">
-    <h3 class="portfolio-sub center tw" data-phrases='["Reels","Short-form video","Edited in CapCut"]' aria-label="Reels"><span class="tw-text" aria-hidden="true">Reels</span><span class="tw-caret" aria-hidden="true"></span></h3>
+    <h3 class="portfolio-sub center tw" data-phrases="[&quot;Reels&quot;,&quot;Short-form video&quot;,&quot;Edited in CapCut&quot;]" aria-label="Reels"><span class="tw-text" aria-hidden="true">Reels</span><span class="tw-caret" aria-hidden="true"></span></h3>
     <p class="portfolio-hint">Hover or tab to a reel, then click it to play.</p>
     <div class="reels" id="reels"></div>
 
@@ -220,7 +220,7 @@
 <section id="experience" class="section section-alt snap" data-label="Experience">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">04</span>Experience</p>
-    <h2 class="center tw" data-phrases='["Where I've Worked","What I've Delivered","Who I've Supported"]' aria-label="Where I&#39;ve Worked"><span class="tw-text" aria-hidden="true">Where I&#39;ve Worked</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class="center tw" data-phrases="[&quot;Where I've Worked&quot;,&quot;What I've Delivered&quot;,&quot;Who I've Supported&quot;]" aria-label="Where I&#39;ve Worked"><span class="tw-text" aria-hidden="true">Where I&#39;ve Worked</span><span class="tw-caret" aria-hidden="true"></span></h2>
 
     <div class="exp-stack">
 
@@ -352,7 +352,7 @@
 <section id="tools" class="section snap" data-label="Tools">
   <div class="container">
     <p class="eyebrow center"><span class="sec-num">05</span>Tools</p>
-    <h2 class="center tw" data-phrases='["Tools I Work With","My Daily Stack","Platforms I Know"]' aria-label="Tools I Work With"><span class="tw-text" aria-hidden="true">Tools I Work With</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class="center tw" data-phrases="[&quot;Tools I Work With&quot;,&quot;My Daily Stack&quot;,&quot;Platforms I Know&quot;]" aria-label="Tools I Work With"><span class="tw-text" aria-hidden="true">Tools I Work With</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="section-sub center">A stack I use daily across executive support, sales ops, and content.</p>
   </div>
 
@@ -363,12 +363,13 @@
         <span class="tool"><img src="https://cdn.simpleicons.org/asana" alt=""/>Asana</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/notion/1A1A1A" alt=""/>Notion</span>
         <span class="tool"><img src="Gohighlevel.png" alt=""/>GoHighLevel</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/linkedin" alt=""/>Sales Navigator</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/apollographql/1A1A1A" alt=""/>Apollo</span>
+        <span class="tool"><img src="logos/sales-navigator.png" alt=""/>Sales Navigator</span>
+        <span class="tool"><img src="logos/apollo.png" alt=""/>Apollo</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/google" alt=""/>Google Workspace</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Bigin</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Campaigns</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Recruit</span>
+        <span class="tool"><img src="logos/zoho-bigin.png" alt=""/>Zoho Bigin</span>
+        <span class="tool"><img src="logos/zoho-campaigns.png" alt=""/>Zoho Campaigns</span>
+        <span class="tool"><img src="logos/zoho-recruit.png" alt=""/>Zoho Recruit</span>
+        <span class="tool"><img src="logos/zoho-projects.png" alt=""/>Zoho Projects</span>
         <span class="tool"><img src="Canva-logo-PNG-large-size.png" alt=""/>Canva</span>
         <span class="tool"><img src="Capcut-icon.png" alt=""/>CapCut</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/dropbox" alt=""/>Dropbox</span>
@@ -377,12 +378,13 @@
         <span class="tool"><img src="https://cdn.simpleicons.org/asana" alt=""/>Asana</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/notion/1A1A1A" alt=""/>Notion</span>
         <span class="tool"><img src="Gohighlevel.png" alt=""/>GoHighLevel</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/linkedin" alt=""/>Sales Navigator</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/apollographql/1A1A1A" alt=""/>Apollo</span>
+        <span class="tool"><img src="logos/sales-navigator.png" alt=""/>Sales Navigator</span>
+        <span class="tool"><img src="logos/apollo.png" alt=""/>Apollo</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/google" alt=""/>Google Workspace</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Bigin</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Campaigns</span>
-        <span class="tool"><img src="https://cdn.simpleicons.org/zoho" alt=""/>Zoho Recruit</span>
+        <span class="tool"><img src="logos/zoho-bigin.png" alt=""/>Zoho Bigin</span>
+        <span class="tool"><img src="logos/zoho-campaigns.png" alt=""/>Zoho Campaigns</span>
+        <span class="tool"><img src="logos/zoho-recruit.png" alt=""/>Zoho Recruit</span>
+        <span class="tool"><img src="logos/zoho-projects.png" alt=""/>Zoho Projects</span>
         <span class="tool"><img src="Canva-logo-PNG-large-size.png" alt=""/>Canva</span>
         <span class="tool"><img src="Capcut-icon.png" alt=""/>CapCut</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/dropbox" alt=""/>Dropbox</span>
@@ -399,9 +401,9 @@
 
         <span class="tool"><img src="Freshdesk.png" alt=""/>Freshdesk</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/wordpress/1A1A1A" alt=""/>WordPress</span>
-        <span class="tool"><span class="tool-badge" aria-hidden="true">NS</span>NetSuite</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/evernote" alt=""/>Evernote</span>
-        <span class="tool"><span class="tool-badge" aria-hidden="true">MS</span>Microsoft Suite</span>
+        <span class="tool"><img src="logos/microsoft-365.png" alt=""/>Microsoft Suite</span>
+        <span class="tool"><img src="logos/chatgpt.png" alt=""/>ChatGPT</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/anthropic/1A1A1A" alt=""/>Claude</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/perplexity" alt=""/>Perplexity</span>
       </div>
@@ -414,9 +416,9 @@
 
         <span class="tool"><img src="Freshdesk.png" alt=""/>Freshdesk</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/wordpress/1A1A1A" alt=""/>WordPress</span>
-        <span class="tool"><span class="tool-badge" aria-hidden="true">NS</span>NetSuite</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/evernote" alt=""/>Evernote</span>
-        <span class="tool"><span class="tool-badge" aria-hidden="true">MS</span>Microsoft Suite</span>
+        <span class="tool"><img src="logos/microsoft-365.png" alt=""/>Microsoft Suite</span>
+        <span class="tool"><img src="logos/chatgpt.png" alt=""/>ChatGPT</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/anthropic/1A1A1A" alt=""/>Claude</span>
         <span class="tool"><img src="https://cdn.simpleicons.org/perplexity" alt=""/>Perplexity</span>
       </div>
@@ -430,7 +432,7 @@
 <footer id="contact" class="curtain snap-end" data-label="Contact">
   <div class="curtain-inner container" id="curtainInner">
     <p class="eyebrow"><span class="sec-num">06</span>Contact</p>
-    <h2 class=" tw" data-phrases='["Let's work together.","Let's talk.","Say hello."]' aria-label="Let&#39;s work together."><span class="tw-text" aria-hidden="true">Let&#39;s work together.</span><span class="tw-caret" aria-hidden="true"></span></h2>
+    <h2 class=" tw" data-phrases="[&quot;Let's work together.&quot;,&quot;Let's talk.&quot;,&quot;Say hello.&quot;]" aria-label="Let&#39;s work together."><span class="tw-text" aria-hidden="true">Let&#39;s work together.</span><span class="tw-caret" aria-hidden="true"></span></h2>
     <p class="curtain-sub">Open to Executive Assistant, Social Media Manager, and marketing roles.</p>
     <div class="curtain-links">
       <a class="curtain-link" href="mailto:cathleenpoquiz0710@gmail.com">
@@ -474,8 +476,8 @@
   </div>
 </div>
 
-<script src="script.js?v=20261105-4"></script>
-<script src="portfolio.js?v=20261105-4"></script>
-<script src="effects.js?v=20261105-4"></script>
+<script src="script.js?v=20261105-5"></script>
+<script src="portfolio.js?v=20261105-5"></script>
+<script src="effects.js?v=20261105-5"></script>
 </body>
 </html>

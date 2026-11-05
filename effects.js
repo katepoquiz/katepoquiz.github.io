@@ -40,23 +40,39 @@
     try { phrases = JSON.parse(el.dataset.phrases); } catch { return; }
     const text = el.querySelector('.tw-text');
     if (!text || !phrases.length) return;
-    text.textContent = phrases[0];
+    // A "|" in a phrase marks where the accent-colored part starts (e.g. "Hi, I'm |Kate").
+    const parts = phrases.map(p => {
+      const k = p.indexOf('|');
+      const plain = p.replace('|', '');
+      return { plain, split: k < 0 ? plain.length : k };
+    });
+    const lead = document.createElement('span');
+    const accent = document.createElement('span');
+    accent.className = 'accent';
+    function render(i, count) {
+      const { plain, split } = parts[i];
+      lead.textContent = plain.slice(0, Math.min(count, split));
+      accent.textContent = count > split ? plain.slice(split, count) : '';
+    }
+    text.textContent = '';
+    text.append(lead, accent);
+    render(0, parts[0].plain.length);
     if (reduced) return; // final state, no animation
 
     let idx = 0;
-    let n = phrases[0].length;
+    let n = parts[0].plain.length;
     let mode = 'hold'; // type | hold | delete | pause
     let timer = null;
     let visible = false;
 
     const schedule = ms => { clearTimeout(timer); if (visible) timer = setTimeout(tick, ms); };
     function tick() {
-      const phrase = phrases[idx];
+      const len = parts[idx].plain.length;
       if (mode === 'type') {
         n++;
-        text.textContent = phrase.slice(0, n);
+        render(idx, n);
         el.classList.add('typing');
-        if (n >= phrase.length) { mode = 'hold'; el.classList.remove('typing'); schedule(1500); }
+        if (n >= len) { mode = 'hold'; el.classList.remove('typing'); schedule(1500); }
         else schedule(70 + Math.random() * 70); // 70-140ms, human-ish
       } else if (mode === 'hold') {
         mode = 'delete';
@@ -64,7 +80,7 @@
         schedule(30);
       } else if (mode === 'delete') {
         n--;
-        text.textContent = phrase.slice(0, Math.max(0, n));
+        render(idx, Math.max(0, n));
         if (n <= 0) { mode = 'pause'; el.classList.remove('typing'); schedule(400); }
         else schedule(30);
       } else {
@@ -81,6 +97,45 @@
       else clearTimeout(timer);
     }, { root: scroller, threshold: 0 }).observe(el);
   });
+
+  /* ---------- Hand-marker highlights in the hero ---------- */
+  const marks = [...document.querySelectorAll('.mark')];
+  marks.forEach((m, i) => m.style.setProperty('--mark-delay', `${300 + i * 350}ms`));
+  if (reduced) {
+    marks.forEach(m => m.classList.add('mark-on'));
+  } else {
+    const markIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('mark-on');
+        markIO.unobserve(e.target);
+      });
+    }, { root: scroller, threshold: 0.6 });
+    marks.forEach(m => markIO.observe(m));
+  }
+
+  /* ---------- Soft ripple on the hero buttons ---------- */
+  if (!reduced) {
+    const spawn = (btn, x, y) => {
+      const r = document.createElement('span');
+      r.className = 'ripple-ink';
+      r.setAttribute('aria-hidden', 'true');
+      r.style.left = `${x}px`;
+      r.style.top = `${y}px`;
+      r.addEventListener('animationend', () => r.remove());
+      btn.appendChild(r);
+    };
+    document.querySelectorAll('.ripple').forEach(btn => {
+      btn.addEventListener('pointerdown', e => {
+        const rect = btn.getBoundingClientRect();
+        spawn(btn, e.clientX - rect.left, e.clientY - rect.top);
+      });
+      // keyboard activation (Enter) has no pointer position: ripple from the center
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter') spawn(btn, btn.offsetWidth / 2, btn.offsetHeight / 2);
+      });
+    });
+  }
 
   /* ---------- Line-by-line reveal ---------- */
   // Each block keeps its plain text; lines are rebuilt from it on resize.
