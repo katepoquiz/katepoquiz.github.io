@@ -1,5 +1,6 @@
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
@@ -67,7 +68,9 @@ const sectionObserver = new IntersectionObserver(entries => {
 // The contact footer sits behind the page (sticky), so it's tracked by scroll position instead.
 sections.forEach(s => { if (s.id !== 'contact') sectionObserver.observe(s); });
 function checkContact() {
-  const footerH = document.getElementById('contact').offsetHeight;
+  const footer = document.getElementById('contact');
+  if (!footer) return; // contact section is currently removed
+  const footerH = footer.offsetHeight;
   const revealed = scroller.scrollTop + scroller.clientHeight - document.getElementById('page').offsetHeight;
   contactShown = revealed > footerH * 0.5;
   setIndex(contactShown ? contactIndex : pageIndex);
@@ -140,7 +143,7 @@ const curtainInner = document.getElementById('curtainInner');
 let curtainTick = false;
 function updateCurtain() {
   curtainTick = false;
-  if (!curtainInner || prefersReduced.matches) return;
+  if (!curtainInner || !document.getElementById('contact') || prefersReduced.matches) return;
   const footerH = document.getElementById('contact').offsetHeight;
   const revealed = scroller.scrollTop + scroller.clientHeight - page.offsetHeight;
   const p = Math.max(0, Math.min(1, revealed / footerH));

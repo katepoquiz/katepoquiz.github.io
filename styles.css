@@ -810,3 +810,6 @@ body { overflow: hidden; background: var(--accent-dark); }
 /* text sitting directly on the mesh: darker tones keep AA at its darkest moment */
 .section-alt .section-sub { color: #4F4A45; }
 .section-alt > .container > .eyebrow { color: #6E4E44; }
+/* Contact section is removed for now: the page simply ends after Tools */
+body { background: #FFFFFF; }
+.page { border-radius: 0; box-shadow: none; }
